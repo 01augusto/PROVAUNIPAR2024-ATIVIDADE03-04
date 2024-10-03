@@ -7,7 +7,6 @@ public class Atividade03 {
         System.out.print("Quantos filmes você deseja avaliar? ");
         int quantidadeFilmes = scanner.nextInt();
 
-
         if (quantidadeFilmes <= 0) {
             System.out.println("A quantidade de filmes deve ser maior que zero.");
             return;
@@ -16,9 +15,11 @@ public class Atividade03 {
         String[] titulos = new String[quantidadeFilmes];
         double[] avaliacoes = new double[quantidadeFilmes];
 
+
+        scanner.nextLine();
+
         for (int i = 0; i < quantidadeFilmes; i++) {
             System.out.print("Digite o título do filme " + (i + 1) + ": ");
-            scanner.nextLine();
             titulos[i] = scanner.nextLine();
         }
 
@@ -51,7 +52,7 @@ public class Atividade03 {
 
         double mediaAvaliacoes = somaAvaliacoes / quantidadeFilmes;
 
-        System.out.printf("Média das avaliações:", mediaAvaliacoes);
+        System.out.printf("Média das avaliações: %.2f%n", mediaAvaliacoes);
         System.out.println("Quantidade de filmes avaliados como bons: " + filmesBons);
         System.out.println("Quantidade de filmes avaliados como ruins: " + filmesRuins);
 
